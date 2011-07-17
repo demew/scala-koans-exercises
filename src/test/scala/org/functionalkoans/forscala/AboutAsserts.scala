@@ -7,25 +7,25 @@ import support.KoanSuite
 class AboutAsserts extends KoanSuite with ShouldMatchers {
 
   koan("should be true") {
-    assert(false) // should be true
+    assert(true) // should be true
   }
 
   koan("should be true with message") {
-    assert(false, "This should be true")
+    assert(true, "This should be true")
   }
 
   koan("should be true with should matchers") {
-    true should be(__) // should be true
+    true should be(true) // should be true
   }
 
   koan("should match two equal values") {
     val v1 = 4
     val v2 = 4
 
-    assert(v1 === __)
+    assert(v1 === v2)
   }
 
   koan("sometimes we expect you to fill in the values") {
-    assert(1 + 1 === __)
+    assert(1 + 1 === 2)
   }
 }
